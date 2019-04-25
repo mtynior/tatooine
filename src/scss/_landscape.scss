@@ -1,0 +1,183 @@
+.landscape_element {
+  position: absolute;
+  height: auto;
+  z-index: $landscape-elements-z-index;
+}
+
+.landscape_animatable {
+  animation: landscape_animation 60s linear infinite;
+}
+
+.shadow_element {
+  position: absolute;
+  height: auto;
+  width: 100vw;
+  left: 0vw;
+  bottom: 0vw;
+  filter: blur(2px);
+  z-index: $shadows-z-index;
+}
+
+#mountains {
+  @extend .landscape_element, .landscape_animatable;
+  width: 100vw;
+  left: 0;
+  top: calc(100vh - 25vw);
+  z-index: $mountains-z-index;
+}
+
+#landscape {
+  @extend .landscape_element, .landscape_animatable;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  z-index: $landscape-z-index;
+}
+
+@keyframes landscape_animation {
+  0% {
+    filter: brightness(85%);
+  }
+  10% {
+    filter: brightness(85%);
+  }
+  20% {
+    filter: brightness(60%);
+  }
+  30% {
+    filter: brightness(30%);
+  }
+  40% {
+    filter: brightness(30%);
+  }
+  50% {
+    filter: brightness(45%);
+  }
+  60% {
+    filter: brightness(60%);
+  }
+  70% {
+    filter: brightness(75%);
+  }
+  80% {
+    filter: brightness(95%);
+  }
+  90% {
+    filter: brightness(90%);
+  }
+  100% {
+    filter: brightness(85%);
+  }
+}
+
+#house {
+  @extend .landscape_element, .landscape_animatable;
+  width: 50vw;
+  left: 0;
+  bottom: 3vw;
+  z-index: $landscape-elements-z-index;
+}
+
+#crates {
+  @extend .landscape_element, .landscape_animatable;
+  width: 14.75vw;
+  left: 74vw;
+  bottom: 9.5vw;
+}
+
+#luke {
+  @extend .landscape_element;
+  width: 8vw;
+  left: 50vw;
+  bottom: 14vw;
+  animation: luke_animation 60s linear infinite;
+}
+
+@keyframes luke_animation {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#sandcrawler {
+  @extend .landscape_element;
+  width: 1.25vw;
+  left: 35%;
+  bottom: 22.7vw;
+  z-index: $background-landscape-elements-z-index;
+  transform: rotateY(180deg);
+  animation: sandcrawler_animation 120s linear infinite;
+}
+
+@keyframes sandcrawler_animation {
+  0% {
+    left: 35%;
+  }
+  5% {
+    left: 25%;
+    transform: rotateY(180deg);
+  }
+  25% {
+    left: 25%;
+    transform: rotateY(0deg);
+  }
+  50% {
+    left: 100%;
+    transform: rotateY(0deg);
+  }
+  75% {
+    left: 100%;
+    transform: rotateY(180deg);
+  }
+  100% {
+    left: 35%;
+  }
+}
+
+#tuskens {
+  @extend .landscape_element;
+  width: 4.75vw;
+  left: 85vw;
+  bottom: 17.7vw;
+  z-index: $background-landscape-elements-z-index;
+  animation: tuskens_animation 60s linear infinite;
+}
+
+@keyframes tuskens_animation {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,10 @@
+/* Background gradients
+  ---------------------------------------------- */
+#sky {
+  position: absolute;
+  background: transparent;
+  top: 0;
+  height: get-horizon-position();
+  width: 100vw;
+  z-index: $sky-z-index;
+}

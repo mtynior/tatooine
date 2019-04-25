@@ -1,0 +1,37 @@
+footer {
+  position: absolute;
+  z-index: $footer-z-index;
+  width: 100vw;
+  height: auto;
+  bottom: 0;
+  color: #b0926b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: none;
+
+  div {
+    font-size: 1rem;
+    line-height: 2rem;
+
+    @include breakpoint(md) {
+      font-size: 0.75rem;
+      line-height: 1.5rem;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 0.5rem;
+      line-height: 1rem;
+    }
+
+    @include breakpoint(xs) {
+      font-size: 0.5rem;
+      line-height: 1rem;
+    }
+  }
+
+  a {
+    color: #b0926b;
+    z-index: $footer-z-index;
+  }
+}

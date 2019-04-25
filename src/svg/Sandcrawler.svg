@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.9" height="13.38">
+  <defs>
+    <style>
+      .cls-1{fill:#483326}.cls-2,.cls-4{fill:#453326}.cls-3{fill:#4b3326}.cls-4{stroke:#1e1e1e;stroke-miterlimit:10;stroke-width:.25px}
+    </style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Sandcrawler">
+      <path class="cls-1" d="M0 1.16L6.38.98l-.82 7.88H1.18L0 1.16z"/>
+      <path class="cls-2" d="M6.38.77l7.96.21.77 7.88H5.56L6.38.77z"/>
+      <path class="cls-3" d="M18.34 8.86V.29l-3.71.22-.29.47.77 7.88h3.23z"/>
+      <path class="cls-1" d="M24.9 0l-6.56.29L23.5 4.1 24.9 0z"/>
+      <path class="cls-2" d="M18.34 3l5.16 1.1L18.34.29V3z"/>
+      <path class="cls-1" d="M18.34 11.09L23.5 4.1 18.34 3v8.09zM18.34 11.27l-16.13-.46v-.4l-1.1-1.14.07-.41h17.16v2.41z"/>
+      <path d="M24.68.63l-1.91.14v.21l1.75.12.16-.47z"/>
+      <path class="cls-4" d="M8.06 13l-4.72-.15a4.45 4.45 0 0 1-1.07-1.36v-.3a.33.33 0 0 1 .33-.3l6.21.21a.32.32 0 0 1 .31.31v.3A4 4 0 0 1 8.06 13zM17.27 13.26l-4.72-.16a4.34 4.34 0 0 1-1.07-1.36v-.3a.31.31 0 0 1 .33-.29l6.21.2a.33.33 0 0 1 .31.32V12a4.06 4.06 0 0 1-1.06 1.26z"/>
+    </g>
+  </g>
+</svg>

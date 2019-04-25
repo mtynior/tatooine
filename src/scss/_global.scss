@@ -1,0 +1,29 @@
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(
+    rgba(79, 120, 174, 1),
+    rgba(135, 203, 202, 1),
+    rgba(197, 203, 185, 1)
+  );
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  opacity: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 3s ease;
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+@function get-horizon-position() {
+  @return calc(100vh - 20vw); // full height - height_of_the_landscape
+}

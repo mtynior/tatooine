@@ -1,0 +1,169 @@
+.lightning {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: $suns-z-index;
+}
+
+.sun {
+  width: 100%;
+  position: absolute;
+}
+
+@mixin create_sun_shape_with_radius($radius) {
+  border-radius: $radius / 2;
+  width: $radius * 0.75;
+  height: $radius * 0.75;
+}
+
+.tatoo1 {
+  @extend .sun;
+  left: -10%;
+  top: 100%;
+}
+
+.tatoo1 div {
+  @include create_sun_shape_with_radius($tatoo1-radius);
+  position: relative;
+  background: linear-gradient(
+    -5deg,
+    #ffffff,
+    #f9fedb,
+    #e5bd41,
+    #da731f,
+    #d95229
+  );
+  background-size: 100% 500%;
+  animation: tatoo1_transition 60s ease infinite;
+}
+
+@keyframes tatoo1_transition {
+  0% {
+    background-position: 0% 100%;
+    width: $tatoo1-radius * 0.75;
+    height: $tatoo1-radius * 0.75;
+    filter: blur(2px);
+  }
+  5% {
+    background-position: 0% 80%;
+    width: $tatoo1-radius * 0.85;
+    height: $tatoo1-radius * 0.85;
+    filter: blur(1px);
+  }
+  14% {
+    background-position: 0% 0%;
+    width: $tatoo1-radius;
+    height: $tatoo1-radius;
+    filter: blur(1px);
+  }
+  20% {
+    background-position: 0% 0%;
+    width: $tatoo1-radius;
+    height: $tatoo1-radius;
+    filter: blur(1px);
+  }
+  50% {
+    background-position: 0% 70%;
+    width: $tatoo1-radius;
+    height: $tatoo1-radius;
+    filter: blur(1x);
+  }
+  60% {
+    background-position: 0% 70%;
+    width: $tatoo1-radius * 0.5;
+    height: $tatoo1-radius * 0.5;
+    filter: blur(3px);
+  }
+  100% {
+    background-position: 0% 100%;
+    width: $tatoo1-radius * 0.75;
+    height: $tatoo1-radius * 0.75;
+    filter: blur(2px);
+  }
+}
+
+// Tatoo 2
+.tatoo2 {
+  @extend .sun;
+  left: 3vw;
+  top: 12vw;
+}
+
+.tatoo2 div {
+  position: relative;
+  @include create_sun_shape_with_radius($tatoo2-radius);
+  background: linear-gradient(-5deg, #ffffff, #f9fedb, #e5bd41, #d97829);
+  background-size: 100% 300%;
+  animation: tatoo2_transition 60s ease infinite;
+}
+
+@keyframes tatoo2_transition {
+  0% {
+    background-position: 0% 100%;
+    width: $tatoo2-radius * 0.75;
+    height: $tatoo2-radius * 0.75;
+    filter: blur(2px);
+  }
+  4% {
+    background-position: 0% 95%;
+    width: $tatoo2-radius * 0.85;
+    height: $tatoo2-radius * 0.85;
+  }
+  8% {
+    background-position: 0% 80%;
+    filter: blur(1px);
+  }
+  14% {
+    background-position: 0% 50%;
+    width: $tatoo2-radius;
+    height: $tatoo2-radius;
+    filter: blur(1px);
+  }
+  20% {
+    background-position: 0% 0%;
+    width: $tatoo2-radius;
+    height: $tatoo2-radius;
+  }
+  50% {
+    background-position: 0% 70%;
+    width: $tatoo2-radius;
+    height: $tatoo2-radius;
+    filter: blur(2px);
+  }
+  60% {
+    background-position: 0% 70%;
+    width: $tatoo2-radius * 0.5;
+    height: $tatoo2-radius * 0.5;
+    filter: blur(3px);
+  }
+  100% {
+    background-position: 0% 100%;
+    width: $tatoo2-radius * 0.75;
+    height: $tatoo2-radius * 0.75;
+    filter: blur(2px);
+  }
+}
+
+// Suns movement
+.suncrane {
+  background: transparent;
+  position: absolute;
+  width: 65%;
+  height: 2%;
+  top: get-horizon-position();
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: suncrane_animation 60s linear infinite;
+}
+
+@keyframes suncrane_animation {
+  0% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(495deg);
+  }
+}
