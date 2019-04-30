@@ -16,7 +16,7 @@
     Live Site
   </a>
   <br />
-  <a href="https://youtu.be/NISJ_d-Polo" target="_blank">Youtube video</a>
+  <a href="https://youtu.be/NISJ_d-Polo" target="_blank">YouTube video</a>
 </p>
 
 ### Browser support
