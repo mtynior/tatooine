@@ -22,7 +22,7 @@
 ### Browser support
 
 - Chrome - Best experience,
-- Firefox - Everything is displayed properly, but animation is slugish,
+- Firefox - Everything is displayed properly, but animation is sluggish,
 - Safari - Animation is smooth, but there are some artefacts during first animation cycle,
 - Edge, IE - Better use different browser 😛
 
