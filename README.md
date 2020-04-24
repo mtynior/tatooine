@@ -1,16 +1,16 @@
 <h1 align="center">Tatooine</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Made%20with-HTML + CSS +  SVG-64b587.svg" />
+  <img src="https://img.shields.io/badge/Made%20with-HTML+CSS+SVG-64b587.svg" />
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" />
-  <img src="https://img.shields.io/website-up-down-green-red/http/tatooine.live.svg" />
+  <img src="https://img.shields.io/website-up-down-green-red/http/binarysunset.netlify.app.svg" />
 
 </p>
 
 <p align="center">Tatooine is a re-creation of the Binary Sunset scene from Star Wars, created with HTML, CSS and SVG.</p>
 
 <p align="center">
-  <a href="https://tatooine.live" target="_blank">
+  <a href="https://binarysunset.netlify.app" target="_blank">
     <img src="https://user-images.githubusercontent.com/6362174/56718694-8694a580-673f-11e9-9931-20156f89434d.png" width="900px">
     <br>
     Live Site
