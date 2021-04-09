@@ -10,13 +10,15 @@
 <p align="center">Tatooine is a re-creation of the Binary Sunset scene from Star Wars, created with HTML, CSS and SVG.</p>
 
 <p align="center">
-  <a href="https://binarysunset.netlify.app" target="_blank">
+  <a href="https://tatooine.tynior.com/" target="_blank">
     <img src="https://user-images.githubusercontent.com/6362174/56718694-8694a580-673f-11e9-9931-20156f89434d.png" width="900px">
     <br>
     Live Site
   </a>
   <br />
   <a href="https://youtu.be/NISJ_d-Polo" target="_blank">YouTube video</a>
+  <br />
+  <a href="https://codepen.io/mtynior/pen/RmbYBZ" target="_blank">CodePen</a>
 </p>
 
 ### Browser support
