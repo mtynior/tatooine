@@ -1,0 +1,557 @@
+/* Global */
+:root {
+  --stars-z-index: 0;
+  --sky-z-index: 1;
+  --suns-z-index: 2;
+  --mountains-z-index: 3;
+  --landscape-z-index: 4;
+  --shadows-z-index: 5;
+  --background-landscape-elements-z-index: 6;
+  --landscape-elements-z-index: 7;
+  --footer-z-index: 8;
+  --tatoo1-radius: 7vw;
+  --tatoo2-radius: 5vw;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(#4f78ae, #87cbca, #c5cbb9);
+  opacity: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+/* Sky */
+
+#sky {
+  position: absolute;
+  background: transparent;
+  top: 0;
+  height: calc(100vh - 20vw);
+  width: 100vw;
+  z-index: var(--sky-z-index);
+}
+
+/* Stars */ 
+
+#stars {
+  background: #0d133a;
+  width: 100%;
+  height: 100%;
+}
+
+#stafield {
+  position: absolute;
+  opacity: 0;
+  width: 150%;
+  height: 150%;
+  z-index: var(--stars-z-index);
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-animation: stars_animation 120s linear infinite;
+  animation: stars_animation 120s linear infinite;
+}
+
+@keyframes stars_animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* Suns */
+
+.lighting {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: var(--suns-z-index);
+}
+
+.sun,
+.tatoo1,
+.tatoo2 {
+  width: 100%;
+  position: absolute;
+}
+
+.tatoo1 {
+  left: -10%;
+  top: 100%;
+}
+
+.tatoo1 div {
+  border-radius: calc(var(--tatoo1-radius) * 0.5);
+  width: calc(var(--tatoo1-radius) * 0.75);
+  height: calc(var(--tatoo1-radius) * 0.75);
+  position: relative;
+  background: linear-gradient(
+    -5deg,
+    #ffffff,
+    #f9fedb,
+    #e5bd41,
+    #da731f,
+    #d95229
+  );
+  background-size: 100% 500%;
+  -webkit-animation: tatoo1_transition 60s ease infinite;
+  animation: tatoo1_transition 60s ease infinite;
+}
+
+@keyframes tatoo1_transition {
+  0% {
+    background-position: 0% 100%;
+    width: calc(var(--tatoo1-radius) * 0.75);
+    height: calc(var(--tatoo1-radius) * 0.75);
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+  }
+  5% {
+    background-position: 0% 80%;
+    width: calc(var(--tatoo1-radius) * 0.85);
+    height: calc(var(--tatoo1-radius) * 0.85);
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+  }
+  14% {
+    background-position: 0% 0%;
+    width: var(--tatoo1-radius);
+    height: var(--tatoo1-radius);
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+  }
+  20% {
+    background-position: 0% 0%;
+    width: var(--tatoo1-radius);
+    height: var(--tatoo1-radius);
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+  }
+  50% {
+    background-position: 0% 70%;
+    width: var(--tatoo1-radius);
+    height: var(--tatoo1-radius);
+    -webkit-filter: blur(1x);
+    filter: blur(1x);
+  }
+  60% {
+    background-position: 0% 70%;
+    width: calc(var(--tatoo1-radius) * 0.5);
+    height: calc(var(--tatoo1-radius) * 0.5);
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+  }
+  100% {
+    background-position: 0% 100%;
+    width: calc(var(--tatoo1-radius) * 0.75);
+    height: calc(var(--tatoo1-radius) * 0.75);
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+  }
+}
+
+.tatoo2 {
+  left: 3vw;
+  top: 12vw;
+}
+
+.tatoo2 div {
+  position: relative;
+  border-radius: calc(var(--tatoo2-radius) * 0.5);
+  width: 3.75vw;
+  height: 3.75vw;
+  background: linear-gradient(-5deg, #ffffff, #f9fedb, #e5bd41, #d97829);
+  background-size: 100% 300%;
+  -webkit-animation: tatoo2_transition 60s ease infinite;
+  animation: tatoo2_transition 60s ease infinite;
+}
+
+@keyframes tatoo2_transition {
+  0% {
+    background-position: 0% 100%;
+    width: calc(var(--tatoo2-radius) * 0.75);
+    height: calc(var(--tatoo2-radius) * 0.75);
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+  }
+  4% {
+    background-position: 0% 95%;
+    width: calc(var(--tatoo2-radius) * 0.75);
+    height: calc(var(--tatoo2-radius) * 0.75);
+  }
+  8% {
+    background-position: 0% 80%;
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+  }
+  14% {
+    background-position: 0% 50%;
+    width: var(--tatoo2-radius);
+    height: var(--tatoo2-radius);
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+  }
+  20% {
+    background-position: 0% 0%;
+    width: var(--tatoo2-radius);
+    height: var(--tatoo2-radius);
+  }
+  50% {
+    background-position: 0% 70%;
+    width: var(--tatoo2-radius);
+    height: var(--tatoo2-radius);
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+  }
+  60% {
+    background-position: 0% 70%;
+    width: calc(var(--tatoo2-radius) * 0.5);
+    height: calc(var(--tatoo2-radius) * 0.5);
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+  }
+  100% {
+    background-position: 0% 100%;
+    width: calc(var(--tatoo2-radius) * 0.75);
+    height: calc(var(--tatoo2-radius) * 0.75);
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+  }
+}
+
+.suncrane {
+  background: transparent;
+  position: absolute;
+  width: 65%;
+  height: 2%;
+  top: calc(100vh - 20vw);
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-animation: suncrane_animation 60s linear infinite;
+  animation: suncrane_animation 60s linear infinite;
+}
+
+@keyframes suncrane_animation {
+  0% {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  100% {
+    -webkit-transform: rotate(495deg);
+    transform: rotate(495deg);
+  }
+}
+
+/* Landscape */
+
+.landscape_element,
+#mountains,
+#landscape,
+#house,
+#crates,
+#luke,
+#sandcrawler,
+#tuskens {
+  position: absolute;
+  height: auto;
+  z-index: var(--landscape-elements-z-index);
+}
+
+.landscape_animatable,
+#mountains,
+#landscape,
+#house,
+#crates {
+  -webkit-animation: landscape_animation 60s linear infinite;
+  animation: landscape_animation 60s linear infinite;
+}
+
+.shadow_element {
+  position: absolute;
+  height: auto;
+  width: 100vw;
+  left: 0vw;
+  bottom: 0vw;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+  z-index: var(--shadows-z-index);
+}
+
+#mountains {
+  width: 100vw;
+  left: 0;
+  top: calc(100vh - 25vw);
+  z-index: var(--mountains-z-index);
+}
+
+#landscape {
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  z-index: var(--landscape-z-index);
+}
+
+@keyframes landscape_animation {
+  0% {
+    -webkit-filter: brightness(85%);
+    filter: brightness(85%);
+  }
+  10% {
+    -webkit-filter: brightness(85%);
+    filter: brightness(85%);
+  }
+  20% {
+    -webkit-filter: brightness(60%);
+    filter: brightness(60%);
+  }
+  30% {
+    -webkit-filter: brightness(30%);
+    filter: brightness(30%);
+  }
+  40% {
+    -webkit-filter: brightness(30%);
+    filter: brightness(30%);
+  }
+  50% {
+    -webkit-filter: brightness(45%);
+    filter: brightness(45%);
+  }
+  60% {
+    -webkit-filter: brightness(60%);
+    filter: brightness(60%);
+  }
+  70% {
+    -webkit-filter: brightness(75%);
+    filter: brightness(75%);
+  }
+  80% {
+    -webkit-filter: brightness(95%);
+    filter: brightness(95%);
+  }
+  90% {
+    -webkit-filter: brightness(90%);
+    filter: brightness(90%);
+  }
+  100% {
+    -webkit-filter: brightness(85%);
+    filter: brightness(85%);
+  }
+}
+
+#house {
+  width: 50vw;
+  left: 0;
+  bottom: 3vw;
+  z-index: var(--landscape-elements-z-index);
+}
+
+#crates {
+  width: 14.75vw;
+  left: 74vw;
+  bottom: 9.5vw;
+}
+
+#luke {
+  width: 8vw;
+  left: 50vw;
+  bottom: 14vw;
+  -webkit-animation: luke_animation 60s linear infinite;
+  animation: luke_animation 60s linear infinite;
+}
+
+@keyframes luke_animation {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#sandcrawler {
+  width: 1.25vw;
+  left: 35%;
+  bottom: 22.7vw;
+  z-index: var(--background-landscape-elements-z-index);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-animation: sandcrawler_animation 120s linear infinite;
+  animation: sandcrawler_animation 120s linear infinite;
+}
+
+@keyframes sandcrawler_animation {
+  0% {
+    left: 35%;
+  }
+  5% {
+    left: 25%;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  25% {
+    left: 25%;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  50% {
+    left: 100%;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  75% {
+    left: 100%;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  100% {
+    left: 35%;
+  }
+}
+
+#tuskens {
+  width: 4.75vw;
+  left: 85vw;
+  bottom: 17.7vw;
+  z-index: var(--background-landscape-elements-z-index);
+  -webkit-animation: tuskens_animation 60s linear infinite;
+  animation: tuskens_animation 60s linear infinite;
+}
+
+@keyframes tuskens_animation {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  z-index: var(--footer-z-index);
+  width: 100vw;
+  height: auto;
+  bottom: 0;
+  color: #b0926b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-filter: none;
+  filter: none;
+}
+
+footer div {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+@media (max-width: 991.98px) {
+  footer div {
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  footer div {
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+}
+
+@media (max-width: 499.98px) {
+  footer div {
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+}
+
+footer a {
+  color: #b0926b;
+  z-index: var(--footer-z-index);
+}

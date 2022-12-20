@@ -26,29 +26,8 @@
 - Chrome - Best experience,
 - Firefox - Everything is displayed properly, but animation is sluggish,
 - Safari - Animation is smooth, but there are some artefacts during first animation cycle,
-- Edge, IE - Better use different browser 😛
-
-### Installation
-
-1. Install all development dependencies:
-
-```bash
-yarn install # or npm install
-```
-
-2. Initialize project
-
-```bash
-gulp
-```
-
-### Development
-
-For auto reload during development run:
-
-```bash
-gulp watch
-```
+- Edge based on Chromumium - Best experience,
+- Old Edge & IE - Better use newer browser 😛
 
 ### License
 
